@@ -259,7 +259,8 @@
 
 (eval-and-compile
   (defconst mmux-emacs-lisp-addon-identifiers-rex
-    "[a-zA-Z0-9_\\-]+"
+    lisp-mode-symbol-regexp
+    ;;"[a-zA-Z0-9_\\-]+"
     "Regexp to match Emacs Lisp symbols used as syntactic binging's identifiers."))
 
 
