@@ -23,6 +23,10 @@ This  package is  a distribution  of  Emacs Lisp  files implementing  an
 editing mode addon for Emacs Lisp under GNU Emacs.  The addon implements
 special support for the facilities of the MMUX Emacs packages.
 
+  The library targets POSIX systems.  This package is meant to work with
+GNU Emacs version 26+.  This package depends upon the external packages:
+cl-lib.  To run the test suite: this package requires the ERT package.
+
   This package makes use of the GNU Autotools.
 
   The last  time the author  bothered to  update this paragraph,  he had
@@ -118,9 +122,25 @@ tracker:
 C. Resources
 ------------
 
-Development takes place at:
+The latest release of this package can be downloaded from:
+
+   <https://bitbucket.org/marcomaggi/mmux-emacs-lisp-addon/downloads>
+
+development takes place at:
 
 	 <http://github.com/marcomaggi/mmux-emacs-lisp-addon/>
+
+and as backup at:
+
+       <https://bitbucket.org/marcomaggi/mmux-emacs-lisp-addon/>
+
+the documentation is available online:
+
+     <https://marcomaggi.github.io/docs/mmux-emacs-lisp-addon.html>
+
+the GNU Project software can be found here:
+
+			 <https://www.gnu.org/>
 
 
 ### end of file
