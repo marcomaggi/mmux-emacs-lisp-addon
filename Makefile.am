@@ -12,7 +12,10 @@ MAINTAINERCLEANFILES	=
 
 AM_MAKEINFOFLAGS		= --no-split
 info_TEXINFOS			= doc/mmux-emacs-lisp-addon.texi
-doc_chicken_mode_TEXINFOS	= doc/fdl-1.3.texi doc/gpl-3.0.texi doc/macros.texi
+doc_mmux_emacs_lisp_addon_TEXINFOS	= \
+	doc/fdl-1.3.texi		\
+	doc/gpl-3.0.texi		\
+	doc/macros.texi
 
 ## --------------------------------------------------------------------
 
