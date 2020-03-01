@@ -189,6 +189,11 @@
 
 
 ;;;; custom faces
+;;
+;;To search for colour names, see the Wikipedia page:
+;;
+;;   <https://en.wikipedia.org/wiki/X11_color_names>
+;;
 
 ;; (defface mmux-emacs-lisp-addon-built-in-constants-face
 ;;   `((t (:foreground "aquamarine3")))
