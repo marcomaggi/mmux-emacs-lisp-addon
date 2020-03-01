@@ -4,7 +4,7 @@
 
 ;; Author: Marco Maggi <mrc.mgg@gmail.com>
 ;; Created: Feb 29, 2020
-;; Time-stamp: <2020-03-01 07:53:09 marco>
+;; Time-stamp: <2020-03-01 10:48:34 marco>
 ;; Keywords: languages
 
 ;; This file is part of MMUX Emacs Lisp Addon.
@@ -48,7 +48,7 @@
 		(regexp-opt '("mmec-defmethod"
 			      "mmec-defun")
 			    'symbols)
-		"\\s-+\\(\\(?:\\sw\\|\\s_\\|\\\\.\\)+\\)"))
+		"\\(" mmux-emacs-lisp-addon-identifiers-rex "\\)"))
      2)
     )
   "Customise imenu for Emacs Lisp editing using MMUX Emacs packages.

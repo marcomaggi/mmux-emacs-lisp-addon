@@ -257,6 +257,11 @@
     (regexp-opt mmux-emacs-lisp-addon-error-symbols-list 'symbols))
   "Regexp to match known Emacs Lisp error symbols defined by the MMUX Emacs packages.")
 
+(eval-and-compile
+  (defconst mmux-emacs-lisp-addon-identifiers-rex
+    "[a-zA-Z0-9_\\-]+"
+    "Regexp to match Emacs Lisp symbols used as syntactic binging's identifiers."))
+
 
 ;;;; main hook
 
@@ -286,10 +291,9 @@
 		(regexp-opt '("mmec-defmethod"
 			      "mmec-defun")
 			    'symbols)
-		"\\s-*[^()]*" ;match any number of qualifiers
-		"\\s-+("      ;any whitespace and open paren
-		"\\s-*"	      ;optional white space separator
-		"\\(\\sw\\)"))
+		"\\s-+"	;any whitespace, but mandatory
+		"\\(" mmux-emacs-lisp-addon-identifiers-rex "\\)?"
+		))
      (1 font-lock-keyword-face)
      (2 font-lock-function-name-face nil t))
     )
