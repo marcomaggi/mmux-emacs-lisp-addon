@@ -46,8 +46,10 @@
 
 @c ------------------------------------------------------------
 
-@set GITHUB_URL                 @url{http://github.com/marcomaggi/mmux-emacs-lisp-addon}
-@set DOCUMENTATION_URL          @url{http://marcomaggi.github.io/docs/mmux-emacs-lisp-addon.html}
+@set GithubUrl                 @url{https://github.com/marcomaggi/@value{PACKAGE_NICKNAME}}
+@set BitbucketUrl              @url{https://bitbucket.org/marcomaggi/@value{PACKAGE_NICKNAME}}
+@set DownloadUrl               @url{https://bitbucket.org/marcomaggi/@value{PACKAGE_NICKNAME}/downloads}
+@set DocumentationUrl          @url{https://marcomaggi.github.io/docs/@value{PACKAGE_NICKNAME}.html}
 
 @c page
 @c ------------------------------------------------------------
@@ -62,7 +64,7 @@ packages.
 The package is distributed under the terms of the @gnu{} General Public License (@gpl{}), its
 development takes place at:
 
-@center @value{GITHUB_URL}
+@center @value{GithubUrl}
 
 @noindent
 Copyright @copyright{} @value{COPYRIGHT_YEARS} by @value{AUTHOR} @value{AUTHOR_EMAIL}
@@ -166,12 +168,22 @@ the @file{.emacs} file:
 
 The documentation of @value{PACKAGE} is available online:
 
-@center @value{DOCUMENTATION_URL}
+@center @value{DocumentationUrl}
+
+@noindent
+the latest release of this package can be downloaded from:
+
+@center @value{DownloadUrl}
 
 @noindent
 development takes place at:
 
-@center @value{GITHUB_URL}
+@center @value{GithubUrl}
+
+@noindent
+and as backup at:
+
+@center @value{BitbucketUrl}
 
 @c page
 @node concept index
