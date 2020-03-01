@@ -85,40 +85,24 @@
 ;;   (setq font-lock-keywords ...)  ;; NO!!!
 ;;
 ;;rather  we   should  store   a  statically   computed,  full   font  locking   specification  into
-;;`font-lock-defaults'; then,  optionally, we  should dynamically  compute other  specifications and
-;;activate them using `font-lock-add-keywords'.
+;;`font-lock-defaults' (this  is done by the  mode's code); then, optionally,  we should dynamically
+;;compute other specifications and activate them using `font-lock-add-keywords'.
 ;;
-;;The value of  `font-lock-keywords' has two parts.  The  first is computed by Emacs  as selected in
-;;"scheme.el", and  we do not  touch it.  The second  part is initialised  from `font-lock-defaults'
-;;(whose original  value is  copied from  the function  `scheme-mode-variables' in  "scheme.el") and
-;;optionally updated by `font-lock-add-keywords'.
+;;The value of  `font-lock-keywords' has two parts.  The  first is computed by Emacs  as selected by
+;;Emacs Lisp mode, and we do not touch it.  The second part is initialised from `font-lock-defaults'
+;;and optionally updated by `font-lock-add-keywords'.
 ;;
-;;There are  3 mutually exclusive levels  of font locking:  light, medium, heavy.  By  default heavy
-;;mode is  selected; we can  change this, in  a mode specific  manner, by appropriately  setting the
-;;variable `font-lock-maximum-decoration'.  We do  not go into details here, suffice  it to say that
-;;the high level is selected for Scheme mode by doing:
+;;There are 3 mutually exclusive levels of font  locking: light, medium, heavy.  We can change this,
+;;in a mode  specific manner, by appropriately setting  the variable `font-lock-maximum-decoration'.
+;;We do not go into  details here, suffice it to say that the high level  is selected for Emacs Lisp
+;;mode by doing:
 ;;
-;;   (setq font-lock-maximum-decoration '((scheme-mode . 3)))
+;;   (setq font-lock-maximum-decoration '((emacs-lisp-mode . 3)))
 ;;
 ;;for details read the Emacs guide.
 ;;
-;;The  value  of `font-lock-defaults'  is  a  list;  for the  full  setting  with comments  see  the
-;;`mmec-setup-font-locking' function below.  Its first element can be a list of symbols, each symbol
-;;being the name of a variable holding the  font locking specification for a level.  The default for
-;;Scheme mode is:
-;;
-;;   (scheme-font-lock-keywords
-;;    scheme-font-lock-keywords-1
-;;    scheme-font-lock-keywords-2)
-;;
-;;we change it to:
-;;
-;;   (scheme-font-lock-keywords
-;;    scheme-font-lock-keywords-1
-;;    mmec-font-lock-keywords)
-;;
-;;and    embed   `scheme-font-lock-keywords-2'    inside    the   custom
-;;specification `mmec-font-lock-keywords'.
+;;The value  of `font-lock-defaults' is a  list.  Its first element  can be a list  of symbols, each
+;;symbol being the name of a variable holding the font locking specification for a level.
 ;;
 ;;Notes on regular expressions
 ;;----------------------------
@@ -139,7 +123,7 @@
 ;;* The regexp for a mandatory white space followed by an optional open parenthesis is: "\\s-+(?".
 ;;
 ;;* The  "\\<" and  "\\>" match  the empty  strings  at the  beginning and  end of  a "word".   What
-;;  constitutes a "word" is defined by the Emacs syntax table active in Scheme mode.
+;;  constitutes a "word" is defined by the Emacs syntax table active in Emacs Lisp mode.
 ;;
 ;;  We DO NOT want to change the definition of "word", because it is used, for example, with the key
 ;;  commands [M-f] and [M-b].
@@ -166,13 +150,13 @@
 ;;To build a regexp  for a list of words the  second argument should be `words'; to  match a list of
 ;;symbols, like the programming language keywords, the second argument should be `symbols'.
 ;;
-;;To match at the beginning  of a Scheme form, we prepend an open  parenthesis and an optional white
+;;To match at  the beginning of a  Lisp form, we prepend  an open parenthesis and  an optional white
 ;;space and append a mandatory white space:
 ;;
-;;  (concat "(\\s-*"
-;;          (eval-when-compile
-;;            (regexp-opt '("define" "define*") 'symbols))
-;;          "\\s-+")
+;;  (eval-when-compile
+;;    (concat "(\\s-*"
+;;            (regexp-opt '("define" "define*") 'symbols)
+;;            "\\s-+"))
 ;;
 ;;Notes on faces
 ;;--------------
@@ -185,6 +169,10 @@
 ;;
 ;;We define a set of  faces with `defface' forms and a set of  variables with `defconst' forms.  The
 ;;variables can reference both a built in Emacs face or a custom face.
+;;
+;;To search for colour names, see the Wikipedia page:
+;;
+;;   <https://en.wikipedia.org/wiki/X11_color_names>
 ;;
 
 
