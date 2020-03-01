@@ -4,7 +4,7 @@
 
 ;; Author: Marco Maggi <mrc.mgg@gmail.com>
 ;; Created: Feb 29, 2020
-;; Time-stamp: <2020-03-01 07:26:28 marco>
+;; Time-stamp: <2020-03-01 08:25:38 marco>
 ;; Keywords: convenience, data, languages
 
 ;; This file is part of MMUX Emacs Lisp Addon.
@@ -31,7 +31,7 @@
 ;;; Code:
 
 
-;;;; list of identifiers
+;;;; list of identifiers: constants
 
 (defconst mmux-emacs-lisp-addon-built-in-constants-list
   '("t" "nil")
@@ -43,11 +43,8 @@
 
 These constants are defined by the MMUX Emacs packages.")
 
-(defconst mmux-emacs-lisp-addon-syntaxes-list
-  '("mmec-defmethod")
-  "List of macros for the Emacs Lisp language.
-
-These constants are defined by the MMUX Emacs packages.")
+
+;;;; list of identifiers: functions
 
 (defconst mmux-emacs-lisp-addon-functions-list
   '(
@@ -134,10 +131,14 @@ These constants are defined by the MMUX Emacs packages.")
     "mmec-bytevector-greater"
     "mmec-bytevector-leq"
     "mmec-bytevector-geq"
+    "mmec-subbytevector"
     )
   "List of function names for the Emacs Lisp language.
 
 These constants are defined by the MMUX Emacs packages.")
+
+
+;;;; list of identifiers: object types
 
 (defconst mmux-emacs-lisp-addon-object-types-list
   '(
@@ -215,6 +216,39 @@ These constants are defined by the MMUX Emacs packages.")
   "List of object type names for the Emacs Lisp language.
 
 These types are defined by the MMUX Emacs packages.")
+
+
+;;;; list of identifiers: error symbols
+
+(defconst mmux-emacs-lisp-addon-error-symbols-list
+  '(
+    "mmec-error"
+    "mmec-error-constructor"
+    "mmec-error-no-memory"
+    "mmec-error-instantiating-abstract-type"
+    "mmec-error-unsupported-init-type"
+    ;;
+    "mmec-error-bytevector-constructor"
+    "mmec-error-bytevector-constructor-invalid-number-of-slots"
+    "mmec-error-bytevector-constructor-invalid-slot-size"
+    "mmec-error-bytevector-constructor-size-too-big"
+    ;;
+    "mmec-error-value-out-of-range"
+    "mmec-error-index-out-of-range"
+    ;;
+    "mmec-error-bytevector-is-empty"
+    "mmec-error-bytevector-index-out-of-range"
+    "mmec-error-bytevector-span-start-out-of-range"
+    "mmec-error-bytevector-span-past-out-of-range"
+    "mmec-error-bytevector-invalid-span-limits"
+    ;;
+    "mmec-error-signed/unsigned-integer-comparison"
+    "mmec-error-overflow"
+    "mmec-error-underflow"
+    )
+  "List of error symbols for the Emacs Lisp language.
+
+These errors are defined by the MMUX Emacs packages.")
 
 
 ;;;; done

@@ -190,15 +190,15 @@
 
 ;;;; custom faces
 
-(defface mmux-emacs-lisp-addon-built-in-constants-face
-  `((t (:foreground "aquamarine3")))
-  "Emacs Lisp mode custom face used for built-in constants."
-  :group 'lisp
-  :group 'custom-faces)
+;; (defface mmux-emacs-lisp-addon-built-in-constants-face
+;;   `((t (:foreground "aquamarine3")))
+;;   "Emacs Lisp mode custom face used for built-in constants."
+;;   :group 'lisp
+;;   :group 'custom-faces)
 
-(defconst mmux-emacs-lisp-addon-built-in-constants-face
-  'mmux-emacs-lisp-addon-built-in-constants-face
-  "Emacs Lisp mode custom face used for built-in constants.")
+;; (defconst mmux-emacs-lisp-addon-built-in-constants-face
+;;   'mmux-emacs-lisp-addon-built-in-constants-face
+;;   "Emacs Lisp mode custom face used for built-in constants.")
 
 ;;; --------------------------------------------------------------------
 
@@ -224,6 +224,18 @@
   'mmux-emacs-lisp-addon-functions-face
   "Emacs Lisp mode custom face used for MMUX Emacs functions.")
 
+;;; --------------------------------------------------------------------
+
+(defface mmux-emacs-lisp-addon-error-symbols-face
+  `((t (:foreground "orange")))
+  "Emacs Lisp mode custom face used for MMUX Emacs error symbols."
+  :group 'lisp
+  :group 'font-lock-faces)
+
+(defconst mmux-emacs-lisp-addon-error-symbols-face
+  'mmux-emacs-lisp-addon-error-symbols-face
+  "Emacs Lisp mode custom face used for MMUX Emacs error symbols.")
+
 
 ;;;; regular expressions
 
@@ -247,6 +259,11 @@
     (regexp-opt mmux-emacs-lisp-addon-object-types-list 'symbols))
   "Regexp to match known Emacs Lisp object types defined by the MMUX Emacs packages.")
 
+(defconst mmux-emacs-lisp-addon-error-symbols-list-rex
+  (eval-when-compile
+    (regexp-opt mmux-emacs-lisp-addon-error-symbols-list 'symbols))
+  "Regexp to match known Emacs Lisp error symbols defined by the MMUX Emacs packages.")
+
 
 ;;;; main hook
 
@@ -263,10 +280,11 @@
   ;;symbol.
   ;;
   `(
-    (,mmux-emacs-lisp-addon-built-in-constants-rex	1 mmux-emacs-lisp-addon-built-in-constants-face keep)
+    (,mmux-emacs-lisp-addon-built-in-constants-rex	1 font-lock-constant-face keep)
     (,mmux-emacs-lisp-addon-custom-constants-rex	1 mmux-emacs-lisp-addon-custom-constants-face keep)
     (,mmux-emacs-lisp-addon-functions-list-rex		1 mmux-emacs-lisp-addon-functions-face keep)
     (,mmux-emacs-lisp-addon-object-types-list-rex	1 font-lock-type-face)
+    (,mmux-emacs-lisp-addon-error-symbols-list-rex	1 mmux-emacs-lisp-addon-error-symbols-face keep)
 
     ;; (mmec-defmethod mmec-bytevector-ref ?args . ?body)
     ;; (mmec-defun mmec-bytevector-compare ?args . ?body)
