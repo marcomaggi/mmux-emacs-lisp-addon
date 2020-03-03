@@ -4,7 +4,7 @@
 
 ;; Author: Marco Maggi <mrc.mgg@gmail.com>
 ;; Created: Feb 29, 2020
-;; Time-stamp: <2020-03-03 05:10:49 marco>
+;; Time-stamp: <2020-03-03 05:30:18 marco>
 ;; Keywords: convenience, data, languages
 
 ;; This file is part of MMUX Emacs Lisp Addon.
@@ -249,6 +249,9 @@ These types are defined by the MMUX Emacs packages.")
     "mmec-error-signed/unsigned-integer-comparison"
     "mmec-error-overflow"
     "mmec-error-underflow"
+    ;;
+    "mmec-error-invalid-argument"
+    "mmec-error-unknown-number-object-type-or-stem"
     )
   "List of error symbols for the Emacs Lisp language.
 
