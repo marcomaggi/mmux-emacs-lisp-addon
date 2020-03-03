@@ -4,7 +4,7 @@
 
 ;; Author: Marco Maggi <mrc.mgg@gmail.com>
 ;; Created: Feb 29, 2020
-;; Time-stamp: <2020-03-01 08:25:38 marco>
+;; Time-stamp: <2020-03-03 05:10:49 marco>
 ;; Keywords: convenience, data, languages
 
 ;; This file is part of MMUX Emacs Lisp Addon.
@@ -223,6 +223,10 @@ These types are defined by the MMUX Emacs packages.")
 (defconst mmux-emacs-lisp-addon-error-symbols-list
   '(
     "mmec-error"
+    ;;
+    "mmec-error-unsupported-feature"
+    "mmec-error-unimplemented-c-language-function"
+    ;;
     "mmec-error-constructor"
     "mmec-error-no-memory"
     "mmec-error-instantiating-abstract-type"
