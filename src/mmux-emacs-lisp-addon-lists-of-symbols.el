@@ -4,7 +4,7 @@
 
 ;; Author: Marco Maggi <mrc.mgg@gmail.com>
 ;; Created: Feb 29, 2020
-;; Time-stamp: <2020-03-05 06:51:51 marco>
+;; Time-stamp: <2020-03-05 07:20:36 marco>
 ;; Keywords: convenience, data, languages
 
 ;; This file is part of MMUX Emacs Lisp Addon.
@@ -48,7 +48,65 @@ These constants are defined by the MMUX Emacs packages.")
 
 (defconst mmux-emacs-lisp-addon-functions-list
   '(
-    ;; numbers
+    ;; number constructors
+    "make-mmec-char"
+    "make-mmec-schar"
+    "make-mmec-uchar"
+    "make-mmec-wchar"
+    "make-mmec-sshrt"
+    "make-mmec-ushrt"
+    "make-mmec-sint"
+    "make-mmec-uint"
+    "make-mmec-slong"
+    "make-mmec-ulong"
+    "make-mmec-sllong"
+    "make-mmec-ullong"
+    "make-mmec-ssize"
+    "make-mmec-usize"
+    "make-mmec-sintmax"
+    "make-mmec-uintmax"
+    "make-mmec-ptrdiff"
+    "make-mmec-sint8"
+    "make-mmec-uint8"
+    "make-mmec-sint16"
+    "make-mmec-uint16"
+    "make-mmec-sint32"
+    "make-mmec-uint32"
+    "make-mmec-sint64"
+    "make-mmec-uint64"
+    "make-mmec-float"
+    "make-mmec-double"
+    "make-mmec-ldouble"
+    "copy-mmec-char"
+    "copy-mmec-schar"
+    "copy-mmec-uchar"
+    "copy-mmec-wchar"
+    "copy-mmec-sshrt"
+    "copy-mmec-ushrt"
+    "copy-mmec-sint"
+    "copy-mmec-uint"
+    "copy-mmec-slong"
+    "copy-mmec-ulong"
+    "copy-mmec-sllong"
+    "copy-mmec-ullong"
+    "copy-mmec-ssize"
+    "copy-mmec-usize"
+    "copy-mmec-sintmax"
+    "copy-mmec-uintmax"
+    "copy-mmec-ptrdiff"
+    "copy-mmec-sint8"
+    "copy-mmec-uint8"
+    "copy-mmec-sint16"
+    "copy-mmec-uint16"
+    "copy-mmec-sint32"
+    "copy-mmec-uint32"
+    "copy-mmec-sint64"
+    "copy-mmec-uint64"
+    "copy-mmec-float"
+    "copy-mmec-double"
+    "copy-mmec-ldouble"
+
+    ;; operations on numbers
     "mmec-add"
     "mmec-sub"
     "mmec-mul"
