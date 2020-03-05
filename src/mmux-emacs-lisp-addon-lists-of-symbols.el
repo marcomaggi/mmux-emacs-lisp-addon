@@ -4,7 +4,7 @@
 
 ;; Author: Marco Maggi <mrc.mgg@gmail.com>
 ;; Created: Feb 29, 2020
-;; Time-stamp: <2020-03-05 07:24:49 marco>
+;; Time-stamp: <2020-03-05 07:43:36 marco>
 ;; Keywords: convenience, data, languages
 
 ;; This file is part of MMUX Emacs Lisp Addon.
@@ -174,6 +174,7 @@ These constants are defined by the MMUX Emacs packages.")
     "make-mmec-float-bytevector"
     "make-mmec-double-bytevector"
     "make-mmec-ldouble-bytevector"
+    "copy-mmec-bytevector"
     "copy-mmec-char-bytevector"
     "copy-mmec-schar-bytevector"
     "copy-mmec-uchar-bytevector"
