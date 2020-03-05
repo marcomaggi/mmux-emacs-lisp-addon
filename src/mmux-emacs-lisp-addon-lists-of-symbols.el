@@ -4,7 +4,7 @@
 
 ;; Author: Marco Maggi <mrc.mgg@gmail.com>
 ;; Created: Feb 29, 2020
-;; Time-stamp: <2020-03-03 05:30:18 marco>
+;; Time-stamp: <2020-03-05 06:51:51 marco>
 ;; Keywords: convenience, data, languages
 
 ;; This file is part of MMUX Emacs Lisp Addon.
@@ -77,6 +77,15 @@ These constants are defined by the MMUX Emacs packages.")
     "mmec-asinh"
     "mmec-acosh"
     "mmec-atanh"
+
+    ;; number predicates
+    "mmec-fits-number-type-p"
+    "mmec-number-type-is-signed-p"
+
+    ;; number inspection
+    "mmec-limit-min"
+    "mmec-limit-max"
+    "mmec-sizeof-number-type"
 
     ;; bytevectors
     "mmec-bytevector-p"
@@ -223,6 +232,7 @@ These types are defined by the MMUX Emacs packages.")
 (defconst mmux-emacs-lisp-addon-error-symbols-list
   '(
     "mmec-error"
+    "mmec-test-error"
     ;;
     "mmec-error-unsupported-feature"
     "mmec-error-unimplemented-c-language-function"
