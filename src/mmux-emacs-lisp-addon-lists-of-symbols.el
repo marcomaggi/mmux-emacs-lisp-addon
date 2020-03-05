@@ -4,7 +4,7 @@
 
 ;; Author: Marco Maggi <mrc.mgg@gmail.com>
 ;; Created: Feb 29, 2020
-;; Time-stamp: <2020-03-05 07:20:36 marco>
+;; Time-stamp: <2020-03-05 07:24:49 marco>
 ;; Keywords: convenience, data, languages
 
 ;; This file is part of MMUX Emacs Lisp Addon.
@@ -145,7 +145,65 @@ These constants are defined by the MMUX Emacs packages.")
     "mmec-limit-max"
     "mmec-sizeof-number-type"
 
-    ;; bytevectors
+    ;; bytevector constructors
+    "make-mmec-char-bytevector"
+    "make-mmec-schar-bytevector"
+    "make-mmec-uchar-bytevector"
+    "make-mmec-wchar-bytevector"
+    "make-mmec-sshrt-bytevector"
+    "make-mmec-ushrt-bytevector"
+    "make-mmec-sint-bytevector"
+    "make-mmec-uint-bytevector"
+    "make-mmec-slong-bytevector"
+    "make-mmec-ulong-bytevector"
+    "make-mmec-sllong-bytevector"
+    "make-mmec-ullong-bytevector"
+    "make-mmec-ssize-bytevector"
+    "make-mmec-usize-bytevector"
+    "make-mmec-sintmax-bytevector"
+    "make-mmec-uintmax-bytevector"
+    "make-mmec-ptrdiff-bytevector"
+    "make-mmec-sint8-bytevector"
+    "make-mmec-uint8-bytevector"
+    "make-mmec-sint16-bytevector"
+    "make-mmec-uint16-bytevector"
+    "make-mmec-sint32-bytevector"
+    "make-mmec-uint32-bytevector"
+    "make-mmec-sint64-bytevector"
+    "make-mmec-uint64-bytevector"
+    "make-mmec-float-bytevector"
+    "make-mmec-double-bytevector"
+    "make-mmec-ldouble-bytevector"
+    "copy-mmec-char-bytevector"
+    "copy-mmec-schar-bytevector"
+    "copy-mmec-uchar-bytevector"
+    "copy-mmec-wchar-bytevector"
+    "copy-mmec-sshrt-bytevector"
+    "copy-mmec-ushrt-bytevector"
+    "copy-mmec-sint-bytevector"
+    "copy-mmec-uint-bytevector"
+    "copy-mmec-slong-bytevector"
+    "copy-mmec-ulong-bytevector"
+    "copy-mmec-sllong-bytevector"
+    "copy-mmec-ullong-bytevector"
+    "copy-mmec-ssize-bytevector"
+    "copy-mmec-usize-bytevector"
+    "copy-mmec-sintmax-bytevector"
+    "copy-mmec-uintmax-bytevector"
+    "copy-mmec-ptrdiff-bytevector"
+    "copy-mmec-sint8-bytevector"
+    "copy-mmec-uint8-bytevector"
+    "copy-mmec-sint16-bytevector"
+    "copy-mmec-uint16-bytevector"
+    "copy-mmec-sint32-bytevector"
+    "copy-mmec-uint32-bytevector"
+    "copy-mmec-sint64-bytevector"
+    "copy-mmec-uint64-bytevector"
+    "copy-mmec-float-bytevector"
+    "copy-mmec-double-bytevector"
+    "copy-mmec-ldouble-bytevector"
+
+    ;; operations on bytevectors
     "mmec-bytevector-p"
     "mmec-integer-bytevector-p"
     "mmec-signed-integer-bytevector-p"
