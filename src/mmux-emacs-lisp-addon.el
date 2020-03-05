@@ -4,7 +4,7 @@
 
 ;; Author: Marco Maggi <mrc.mgg@gmail.com>
 ;; Created: Feb 29, 2020
-;; Time-stamp: <2020-03-01 10:48:34 marco>
+;; Time-stamp: <2020-03-05 12:40:10 marco>
 ;; Keywords: languages
 
 ;; This file is part of MMUX Emacs Lisp Addon.
@@ -46,7 +46,8 @@
      ,(eval-when-compile
 	(concat "^\\s-*(\\s-*"
 		(regexp-opt '("mmec-defmethod"
-			      "mmec-defun")
+			      "mmec-defun"
+			      "mmec-defmacro")
 			    'symbols)
 		"\\(" mmux-emacs-lisp-addon-identifiers-rex "\\)"))
      2)
@@ -75,6 +76,7 @@ For details on how to use it see `imenu-generic-expression'.")
     ;;happen if we do not load the MMUX Emacs Core package.
     (mmec-defmethod			. 2)
     (mmec-defun				. 2)
+    (mmec-defmacro			. 2)
     )
   "List of indentation rules for MMUX Emacs forms.")
 

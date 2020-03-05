@@ -290,7 +290,8 @@
     (,(eval-when-compile
 	(concat "(\\s-*"
 		(regexp-opt '("mmec-defmethod"
-			      "mmec-defun")
+			      "mmec-defun"
+			      "mmec-defmacro")
 			    'symbols)
 		"\\s-+"	;any whitespace, but mandatory
 		"\\(" mmux-emacs-lisp-addon-identifiers-rex "\\)?"
