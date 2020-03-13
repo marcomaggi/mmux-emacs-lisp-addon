@@ -4,7 +4,7 @@
 
 ;; Author: Marco Maggi <mrc.mgg@gmail.com>
 ;; Created: Feb 29, 2020
-;; Time-stamp: <2020-03-05 07:43:36 marco>
+;; Time-stamp: <2020-03-13 06:45:02 marco>
 ;; Keywords: convenience, data, languages
 
 ;; This file is part of MMUX Emacs Lisp Addon.
@@ -32,10 +32,6 @@
 
 
 ;;;; list of identifiers: constants
-
-(defconst mmux-emacs-lisp-addon-built-in-constants-list
-  '("t" "nil")
-  "List of constants for the Emacs Lisp language.")
 
 (defconst mmux-emacs-lisp-addon-custom-constants-list
   '("--func--")

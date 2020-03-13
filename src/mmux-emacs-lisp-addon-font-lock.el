@@ -183,18 +183,6 @@
 ;;   <https://en.wikipedia.org/wiki/X11_color_names>
 ;;
 
-;; (defface mmux-emacs-lisp-addon-built-in-constants-face
-;;   `((t (:foreground "aquamarine3")))
-;;   "Emacs Lisp mode custom face used for built-in constants."
-;;   :group 'lisp
-;;   :group 'custom-faces)
-
-;; (defconst mmux-emacs-lisp-addon-built-in-constants-face
-;;   'mmux-emacs-lisp-addon-built-in-constants-face
-;;   "Emacs Lisp mode custom face used for built-in constants.")
-
-;;; --------------------------------------------------------------------
-
 (defface mmux-emacs-lisp-addon-custom-constants-face
   `((t (:foreground "aquamarine3")))
   "Emacs Lisp mode custom face used for custom constants."
@@ -231,11 +219,6 @@
 
 
 ;;;; regular expressions
-
-(defconst mmux-emacs-lisp-addon-built-in-constants-rex
-  (eval-when-compile
-    (regexp-opt mmux-emacs-lisp-addon-built-in-constants-list 'symbols))
-  "Regexp to match built-in Emacs Lisp language constants.")
 
 (defconst mmux-emacs-lisp-addon-custom-constants-rex
   (eval-when-compile
@@ -279,7 +262,6 @@
   ;;symbol.
   ;;
   `(
-    (,mmux-emacs-lisp-addon-built-in-constants-rex	1 font-lock-constant-face keep)
     (,mmux-emacs-lisp-addon-custom-constants-rex	1 mmux-emacs-lisp-addon-custom-constants-face keep)
     (,mmux-emacs-lisp-addon-functions-list-rex		1 mmux-emacs-lisp-addon-functions-face keep)
     (,mmux-emacs-lisp-addon-object-types-list-rex	1 font-lock-type-face)
