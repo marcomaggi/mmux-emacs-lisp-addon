@@ -4,7 +4,7 @@
 
 ;; Author: Marco Maggi <mrc.mgg@gmail.com>
 ;; Created: Feb 29, 2020
-;; Time-stamp: <2020-03-13 06:45:02 marco>
+;; Time-stamp: <2020-03-13 06:49:49 marco>
 ;; Keywords: convenience, data, languages
 
 ;; This file is part of MMUX Emacs Lisp Addon.
@@ -135,6 +135,8 @@ These constants are defined by the MMUX Emacs packages.")
     ;; number predicates
     "mmec-fits-number-type-p"
     "mmec-number-type-is-signed-p"
+    "mmec-number-type-p"
+    "mmec-symbol-number-type-is-signed-p"
 
     ;; number inspection
     "mmec-limit-min"
