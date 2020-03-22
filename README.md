@@ -7,8 +7,7 @@ editing mode addon for Emacs Lisp under GNU Emacs.  The addon implements
 special support for the facilities of the MMUX Emacs packages.
 
 The library targets  POSIX systems.  This package is meant  to work with
-GNU Emacs version 26+.  This package depends upon the external packages:
-cl-lib.  To run the test suite: this package requires the ERT package.
+GNU Emacs version 26+.
 
 The package uses the GNU Autotools.
 
